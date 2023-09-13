@@ -1,3 +1,6 @@
+#!/bin/env python3
+# -*- coding: utf-8 -*-
+
 import sys
 from PyPDF2 import PdfWriter, PdfReader
 
@@ -33,7 +36,7 @@ def pdf_split(fname, start, end=None):
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("Used: python script_name.py path_to_pdf start_page [end_page]")
+        print("Использование: python script_name.py path_to_pdf start_page [end_page]")
         sys.exit(1)
 
     path_to_pdf = sys.argv[1]
@@ -44,4 +47,3 @@ if __name__ == "__main__":
         pdf_split(path_to_pdf, start_page, end_page)
     else:
         pdf_split(path_to_pdf, start_page)
-
